@@ -20,6 +20,7 @@ module.exports = async ({ actions, graphql }) => {
                     uri
                     pageId
                     title
+                    isFrontPage
                 }
             }
         }
@@ -54,6 +55,7 @@ module.exports = async ({ actions, graphql }) => {
   await fetchPages({ first: 100, after: null }).then(allPages => {
     const pageTemplate = path.resolve(`./src/templates/page.js`)
     allPages.map(page => {
+      if (page.isFrontPage === true) page.uri = ``
       console.log(`create page: ${page.uri}`)
       createPage({
         path: `/${page.uri}`,
