@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
+import SEO from "../components/seo"
 
 const Post = props => {
   const {
@@ -13,11 +14,13 @@ const Post = props => {
   const { title, content, author, categories, tags } = post
   return (
     <Layout>
+      <SEO title={title} />
       <h1>{title}</h1>
       <ul className="metaData list-unstyled">
         <li>
           Author: <Link to={`/user/${author.slug}`}>{author.name}</Link>
         </li>
+
         <li className="d-flex align-items-center">
           <div>Category:</div>
           <ul className="list-unstyled d-flex">
