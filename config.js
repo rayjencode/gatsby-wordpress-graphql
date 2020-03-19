@@ -1,5 +1,6 @@
 const config = {
-  wordPressURL: `http://gatsbywpgrahql.local`,
+  wordPressURL: `https://rankdepartment.com`,
+  // wordPressURL: `http://gatsbywpgrahql.local`,
 }
 
 export default config

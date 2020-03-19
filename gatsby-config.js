@@ -11,7 +11,8 @@ module.exports = {
       options: {
         typeName: `WPGraphql`,
         fieldName: `wpgraphql`,
-        url: `http://gatsbywpgrahql.local/graphql`,
+        url: `https://rankdepartment.com/graphql`,
+        // url: `http://gatsbywpgrahql.local/graphql`,
       },
     },
     {
