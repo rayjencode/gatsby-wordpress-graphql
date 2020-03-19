@@ -24,6 +24,7 @@ function SEO({ description, lang, meta, title }) {
         wpgraphql {
           allSettings {
             generalSettingsTitle
+            generalSettingsDescription
           }
         }
       }
@@ -42,7 +43,7 @@ function SEO({ description, lang, meta, title }) {
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: wpgraphql.allSettings.generalSettingsTitle,
         },
         {
           property: `og:title`,
@@ -50,7 +51,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: wpgraphql.allSettings.generalSettingsTitle,
         },
         {
           property: `og:type`,
@@ -70,7 +71,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: wpgraphql.allSettings.generalSettingsTitle,
         },
       ].concat(meta)}
     />
