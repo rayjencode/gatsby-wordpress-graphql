@@ -21,6 +21,7 @@ a {
 .mainMenu__link:hover .mainMenu__list__child {
   display: block;
   position: absolute;
+  background: rebeccapurple;
 }
 
 /* Meta Data */
